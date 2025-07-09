@@ -17,7 +17,7 @@ def index():
                 file.save(save_path)
                 saved_paths.append(filename)
 
-        # TODO: Run extractor + fingerprint + graph
+
         return render_template("index.html", uploaded=True, files=saved_paths)
 
     return render_template("index.html", uploaded=False)
