@@ -34,6 +34,25 @@
         </ul>
       </div>
     {% endif %}
+
+        {% if extracted %}
+          <div class="mt-5">
+            <h3>Extracted Content:</h3>
+            {% for filename, chunks in extracted.items() %}
+              <div class="class my-3">
+                <div class="card-header bg-dark text-white">
+                  {{ filename }}
+                </div>
+                <div class="card-body">
+                  {% for chunk in chunks %}
+                    <pre class="p-2 bg-light border rounded mb-2">{{ chunk }}</pre>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+      </div>
+    {% endif %}
   </div>
 
 
