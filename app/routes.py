@@ -2,6 +2,7 @@ import os
 from flask import Blueprint, render_template, request
 from werkzeug.utils import secure_filename
 from .extractor import extract_chunks
+from .fingerprints import get_sha256, get_embeddings, get_embeddings
 
 main = Blueprint('main', __name__)
 
