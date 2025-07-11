@@ -1,4 +1,6 @@
 import os
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 from flask import Blueprint, render_template, request
 from werkzeug.utils import secure_filename
 from .extractor import extract_chunks
@@ -6,6 +8,9 @@ from .fingerprints import get_sha256, get_embeddings
 from .history import load_history, update_history
 
 main = Blueprint('main', __name__)
+
+def is_semantically_similar(new_emb, existing_emb, threshold=0.9):
+    return cosine_similarity([new_emb], [existing_emb])[0][0] >= threshold
 
 
 @main.route("/", methods=["GET", "POST"])
@@ -38,7 +43,13 @@ def index():
                     hash_val = get_sha256(chunk)
                     embedding = get_embeddings(chunk)
 
-                    prev_match = next((c for c in previous_chunks if c["hash"] == hash_val), None)
+                    embedding_array = embedding.tolist()
+                    prev_match = next(
+                        (c for c in previous_chunks if
+                         c["hash"] == hash_val or
+                         is_semantically_similar(embedding_array, c["embedding"])),
+                        None
+                    )
                     if prev_match:
                         status = "Reused"
                     else:
