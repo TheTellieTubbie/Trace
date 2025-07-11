@@ -15,7 +15,7 @@ def save_history(history):
 
 def update_history(filename, chunks):
     history = load_history()
-    existing = history.get(filename)
+    existing = history.get(filename, [])
     updated = existing + [
         {"hash": c["hash"], "embedding": c["embedding"]}
         for c in chunks

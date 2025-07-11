@@ -12,7 +12,13 @@ main = Blueprint('main', __name__)
 def index():
     extracted_data = {}
     history = load_history()
-    previous_chunks = history.get("chunks",[])
+
+    previous_chunks = []
+    for chunks in history.values():
+        previous_chunks.extend(chunks)
+
+
+    new_chunks_for_history = []
 
     if request.method == "POST":
         uploaded_files = request.files.getlist("files")
@@ -37,6 +43,11 @@ def index():
                         status = "Reused"
                     else:
                         status = "New"
+                        new_chunks_for_history.append({
+                            "hash": hash_val,
+                            "text": chunk,
+                            "embedding": embedding.tolist(),
+                        })
 
                     chunk_data.append({
                         "text": chunk,
@@ -47,6 +58,7 @@ def index():
 
                 extracted_data[filename] = chunk_data
 
+        update_history(filename, new_chunks_for_history)
 
         return render_template("index.html", uploaded=True, files=saved_paths, extracted=extracted_data)
 
