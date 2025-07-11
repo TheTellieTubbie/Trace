@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, request
 from werkzeug.utils import secure_filename
 from .extractor import extract_chunks
 from .fingerprints import get_sha256, get_embeddings
+from .history import load_history, update_history
 
 main = Blueprint('main', __name__)
 
@@ -10,6 +11,8 @@ main = Blueprint('main', __name__)
 @main.route("/", methods=["GET", "POST"])
 def index():
     extracted_data = {}
+    history = load_history()
+    previous_chunks = history.get("chunks",[])
 
     if request.method == "POST":
         uploaded_files = request.files.getlist("files")
@@ -28,10 +31,18 @@ def index():
                 for chunk in chunks:
                     hash_val = get_sha256(chunk)
                     embedding = get_embeddings(chunk)
+
+                    prev_match = next((c for c in previous_chunks if c["hash"] == hash_val), None)
+                    if prev_match:
+                        status = "Reused"
+                    else:
+                        status = "New"
+
                     chunk_data.append({
                         "text": chunk,
                         "hash": hash_val,
                         "embedding": embedding.tolist(),
+                        "status": status
                     })
 
                 extracted_data[filename] = chunk_data

@@ -46,6 +46,13 @@
                 <div class="card-body">
                   {% for chunk in chunks %}
                     <pre class="mb-2">{{ chunk.text }}</pre>
+                    <p><strong>Status:</strong>
+                      {% if chunk.status == "New" %}
+                        <span class="badge bg-success">New</span>
+                      {% else %}
+                        <span class="badge bg-warning text-bg-danger">Reused</span>
+                      {% endif %}
+                    </p>
                     <p><strong>SHA256:</strong> {{ chunk.hash }}</p>
                     <p><strong>Embedding:</strong> {{ chunk.embedding[:5] }}... ({{ chunk.embedding|length }} dims)</p>
                     <hr>
