@@ -6,13 +6,13 @@ def extract_chunks(file_path):
     ext = os.path.splitext(file_path)[1].lower()
 
     if ext == '.txt':
-        return extract_chunks(file_path)
+        return extract_from_txt(file_path)
     elif ext == '.md':
-        return extract_chunks(file_path)
+        return extract_from_md(file_path)
     elif ext == '.py':
-        return extract_chunks(file_path)
+        return extract_from_py(file_path)
     elif ext == '.docx':
-        return extract_chunks(file_path)
+        return extract_from_docx(file_path)
     else:
         return []
 
@@ -38,6 +38,11 @@ def extract_from_py(path):
         if line.strip().startswith('def') or line.strip().startswith('class'):
             if current_block:
                 chunks.append("".join(current_block))
+                current_block = []
+        current_block.append(line)
+
+    if current_block:
+        chunks.append("".join(current_block))
 
     return [chunk.strip() for chunk in chunks if chunk.strip()]
 
