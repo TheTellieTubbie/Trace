@@ -1,0 +1,656 @@
+[
+  {
+    "timestamp": 1752538743.2868016,
+    "text": "Clipboard monitor",
+    "hash": "9ffb78c5663016d6a2e4b49bb1c8ee4324419174a6bef9e175198d8c9e1da35a",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.2993002,
+    "text": "New clipboard content:",
+    "hash": "1ccdf169e844c97b7bbd1200d22852520d722c4106501effba05ddcab0e717e2",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.310802,
+    "text": "JSONDecodeError",
+    "hash": "33e72c0500c94a99f5b3c26f2d347a20c7c207dcb8429e6716388581831315d0",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.324803,
+    "text": "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "hash": "6e837f3e276193b00876f86ec3e6e47868d745711e17604c39caf842d0c4ddff",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.3352993,
+    "text": "Tracebac...",
+    "hash": "49bc27792465cd0be9ad75e6b7ebaa82e404e5d52d8e4824c31da5c0ad5aebd1",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.347303,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.3573022,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.3682992,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.380303,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.3897998,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.3998003,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.4123003,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.4223013,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.4338017,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.4448001,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.4568,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.4683018,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.480301,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.495301,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.5073006,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.520802,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.533302,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.5453005,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.5558004,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.5673006,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.578801,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.5918002,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6038003,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6138008,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6227994,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.632299,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6428015,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6507993,
+    "text": "Chunk status: New",
+    "hash": "6cb4e6da465ef39f17803d6f6b4b9ed923039cb27f399ef7cef84e6a2a469247",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6618,
+    "text": "Exception in thread Thread-6:",
+    "hash": "464c16146422e16baaea07c44eac7c6b2376ddf489d84241f8ee1c0161c11678",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.673303,
+    "text": "Traceback (most recent call last):",
+    "hash": "5dd94ced5a2afb4af3a0a9521dc8f9306236b23b01882c52a80e482ae00be37f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.6893005,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\threading.py\", line 980, in _bootstrap_inner",
+    "hash": "9eaa3b317bb1b0cf2ddfd10a824ded6a34d5785eaf475744ce4ac2d0aa9a6afd",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7003021,
+    "text": "self.run()",
+    "hash": "6131e6779bdb627ddf7899af40c3b71cbce49040089ef82b197360426c30f0f0",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7142994,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\threading.py\", line 917, in run",
+    "hash": "fc6f420e213069298a59fb321873a6b330e380a339ff8ce42134ef7884241366",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.728299,
+    "text": "self._target(*self._args, **self._kwargs)",
+    "hash": "3bd53792bd223175c4381cd45ae831e9b7f57463ce5a3f7bfc838d481d01d72f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7427998,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\monitor\\clipboard_monitor.py\", line 61, in monitor_clipboard",
+    "hash": "c97e095e0ce11fe9d9e4df8663f9964a1cf97d190f4a467e23fa30bb6807b499",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7533016,
+    "text": "save_log(log)",
+    "hash": "8cfc3ff60f4c22d5400a9e23f6b74002eb9e73cc30e048633de44a796b3a04fc",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7663002,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\monitor\\clipboard_monitor.py\", line 23, in save_log",
+    "hash": "c4a19dcb96a0e010b8c9c93a0edad016be8e3afbba4e5327b338d8f2dc0688ba",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7792997,
+    "text": "json.dump(load_log(), f, indent=2)",
+    "hash": "1352832b5ccc91d657d110bdee13a9530b8ae5587aec80642ef0610df7239c0b",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.7923007,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\monitor\\clipboard_monitor.py\", line 18, in load_log",
+    "hash": "ca2a8819c6155c3ad471d1a6f02c189882df9fe6159f802fc3815d3c7f96d027",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8033006,
+    "text": "return json.load(f)",
+    "hash": "7dbb288e56c7b43b5ff1f288ad7062abf62956605684db02520a7369734a4c4f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.818801,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\__init__.py\", line 293, in load",
+    "hash": "392dcd5039345f8b2ec9d43d6687d4118f5439182a3a0804a8e4b264f4392288",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8302991,
+    "text": "return loads(fp.read(),",
+    "hash": "e64c0be279d99cef02da63d5670642b250303070a9bca1f0136a0c4befdd07f9",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8437998,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\__init__.py\", line 346, in loads",
+    "hash": "87b62c652237e82eee55257017c6ab2e4db4ecc476ed94ce65c618de358769f8",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8552995,
+    "text": "return _default_decoder.decode(s)",
+    "hash": "6cfef58052dd4a02405ee07914a7171e442260301b491cff0b795873490262e5",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8677998,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\decoder.py\", line 337, in decode",
+    "hash": "4162955a662ce9468965f357a00959f16071d7a6cd946f98ad2018d08b78acdb",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8802998,
+    "text": "obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+    "hash": "83a0d5559eddc4302d7cf3ae141af7ba41d7062a50ace70f1db577149b0f757b",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.8968003,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\decoder.py\", line 355, in raw_decode",
+    "hash": "3d4af2de8ca02e28c704251d7f5043284195877d44d37a754f3541e4fc0c94fd",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.909301,
+    "text": "raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+    "hash": "a2c6544cf9d14eabc4e322bc3f819463d3f5709274846e565495537d9772db85",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9233005,
+    "text": "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "hash": "6e837f3e276193b00876f86ec3e6e47868d745711e17604c39caf842d0c4ddff",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9348004,
+    "text": "Clipboard monitor",
+    "hash": "9ffb78c5663016d6a2e4b49bb1c8ee4324419174a6bef9e175198d8c9e1da35a",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9448013,
+    "text": "Exception in thread Thread-9:",
+    "hash": "0f5c63ed50a1f7d8a60ddabf31111b21e9df3a2b9581c5ce76a0a234d3d36728",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9562998,
+    "text": "Traceback (most recent call last):",
+    "hash": "5dd94ced5a2afb4af3a0a9521dc8f9306236b23b01882c52a80e482ae00be37f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9708014,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\threading.py\", line 980, in _bootstrap_inner",
+    "hash": "9eaa3b317bb1b0cf2ddfd10a824ded6a34d5785eaf475744ce4ac2d0aa9a6afd",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9828012,
+    "text": "self.run()",
+    "hash": "6131e6779bdb627ddf7899af40c3b71cbce49040089ef82b197360426c30f0f0",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538743.9983008,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\threading.py\", line 917, in run",
+    "hash": "fc6f420e213069298a59fb321873a6b330e380a339ff8ce42134ef7884241366",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.0108008,
+    "text": "self._target(*self._args, **self._kwargs)",
+    "hash": "3bd53792bd223175c4381cd45ae831e9b7f57463ce5a3f7bfc838d481d01d72f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.0268006,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\monitor\\clipboard_monitor.py\", line 34, in monitor_clipboard",
+    "hash": "8201c9ccfe341c0cde4b0e66497215aeb784ead4f3828e8485a3ca60a9a3da88",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.0383008,
+    "text": "log = load_log()",
+    "hash": "3a40459925135381d8ac1da9e5eddc70471ad1fb6b0358ee260be9ee5da3710c",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.051802,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\monitor\\clipboard_monitor.py\", line 18, in load_log",
+    "hash": "ca2a8819c6155c3ad471d1a6f02c189882df9fe6159f802fc3815d3c7f96d027",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.0623,
+    "text": "return json.load(f)",
+    "hash": "7dbb288e56c7b43b5ff1f288ad7062abf62956605684db02520a7369734a4c4f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.0758011,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\__init__.py\", line 293, in load",
+    "hash": "392dcd5039345f8b2ec9d43d6687d4118f5439182a3a0804a8e4b264f4392288",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.0858011,
+    "text": "return loads(fp.read(),",
+    "hash": "e64c0be279d99cef02da63d5670642b250303070a9bca1f0136a0c4befdd07f9",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1013005,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\__init__.py\", line 346, in loads",
+    "hash": "87b62c652237e82eee55257017c6ab2e4db4ecc476ed94ce65c618de358769f8",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1127994,
+    "text": "return _default_decoder.decode(s)",
+    "hash": "6cfef58052dd4a02405ee07914a7171e442260301b491cff0b795873490262e5",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1268013,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\decoder.py\", line 337, in decode",
+    "hash": "4162955a662ce9468965f357a00959f16071d7a6cd946f98ad2018d08b78acdb",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1423008,
+    "text": "obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+    "hash": "83a0d5559eddc4302d7cf3ae141af7ba41d7062a50ace70f1db577149b0f757b",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1583014,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\decoder.py\", line 355, in raw_decode",
+    "hash": "3d4af2de8ca02e28c704251d7f5043284195877d44d37a754f3541e4fc0c94fd",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1748,
+    "text": "raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+    "hash": "a2c6544cf9d14eabc4e322bc3f819463d3f5709274846e565495537d9772db85",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.1883025,
+    "text": "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "hash": "6e837f3e276193b00876f86ec3e6e47868d745711e17604c39caf842d0c4ddff",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.210301,
+    "text": "127.0.0.1 - - [15/Jul/2025 01:12:08] \"POST /clipboard HTTP/1.1\" 500 -",
+    "hash": "bc005be55c0e5dd17372e568f38c130c77ef6bd034eb4bc9ddfb386ab215ae64",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.2222996,
+    "text": "Traceback (most recent call last):",
+    "hash": "5dd94ced5a2afb4af3a0a9521dc8f9306236b23b01882c52a80e482ae00be37f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.2428012,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\site-packages\\flask\\app.py\", line 1536, in __call__",
+    "hash": "5c1af81b23cd24968b03772b256ea8c51fc88577b2cbe6e720b8e66938d009d3",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.2623022,
+    "text": "return self.wsgi_app(environ, start_response)",
+    "hash": "6638b9ac39109c55f79306ec57d547cde72fdfc33e4fa954e2ab22499d2c096a",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.2798023,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\site-packages\\flask\\app.py\", line 1514, in wsgi_app",
+    "hash": "4052ceb91470f5bdef655a1c568b4deed5cdc4dffb30cbda9f1515a48b761af7",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.293301,
+    "text": "response = self.handle_exception(e)",
+    "hash": "bfbd00f88d6d38551ce0cca278bdeafaa5072bbfdf8506068feb89d09aa24a9f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3098025,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\site-packages\\flask\\app.py\", line 1511, in wsgi_app",
+    "hash": "847682c97cc2dff88082597b8f34fc969a1dd892388ae4e60c0bd434179568fa",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3203,
+    "text": "response = self.full_dispatch_request()",
+    "hash": "31bdd6cc4f6179b53b79dd0d4d69110aa64269bb46fb1f69afb6299d5ec48f3c",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3332996,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\site-packages\\flask\\app.py\", line 919, in full_dispatch_request",
+    "hash": "f4fa5e4d5eb8bbbfc2798bd5a214e736263bd00a1e53cf05c153d82fd2044b88",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3448007,
+    "text": "rv = self.handle_user_exception(e)",
+    "hash": "997f15882c46f3afd9a692741db262a18654739b1073eddc3e1f4145b4c6e853",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3603003,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\site-packages\\flask\\app.py\", line 917, in full_dispatch_request",
+    "hash": "c21ef04ef75918df9a6ab1438ebae6c5c14a3e0aaab099bf56414968bdcd0bcc",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3713005,
+    "text": "rv = self.dispatch_request()",
+    "hash": "53838c6b771993f4463d409ccaeea3b8ee326baf20b6796bbcffb5450ca8ede0",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3842995,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\site-packages\\flask\\app.py\", line 902, in dispatch_request",
+    "hash": "8b76963011b982ad24183bfcd22386a218b449aac2f687828df5f24de3e4c38d",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.3968012,
+    "text": "return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]",
+    "hash": "079aff2ffd2219f9829136e097002c9ea4623284fb11391b7feadc02bd597c3c",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4087992,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\routes.py\", line 90, in clipboard",
+    "hash": "f50b811f976e0a2ce5623aca096f202787b32d40e92fcb153054bd79475a5754",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4192994,
+    "text": "log_data = load_log()",
+    "hash": "6f596b030f3b11092b3bdf382d2b73456ef3ad5156d33c6412b3c0d3550b9fd5",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4318016,
+    "text": "File \"C:\\Users\\Gab\\Desktop\\Pycharm\\Trace\\app\\monitor\\clipboard_monitor.py\", line 18, in load_log",
+    "hash": "ca2a8819c6155c3ad471d1a6f02c189882df9fe6159f802fc3815d3c7f96d027",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4422998,
+    "text": "return json.load(f)",
+    "hash": "7dbb288e56c7b43b5ff1f288ad7062abf62956605684db02520a7369734a4c4f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4543,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\__init__.py\", line 293, in load",
+    "hash": "392dcd5039345f8b2ec9d43d6687d4118f5439182a3a0804a8e4b264f4392288",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4657996,
+    "text": "return loads(fp.read(),",
+    "hash": "e64c0be279d99cef02da63d5670642b250303070a9bca1f0136a0c4befdd07f9",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4812994,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\__init__.py\", line 346, in loads",
+    "hash": "87b62c652237e82eee55257017c6ab2e4db4ecc476ed94ce65c618de358769f8",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.4923007,
+    "text": "return _default_decoder.decode(s)",
+    "hash": "6cfef58052dd4a02405ee07914a7171e442260301b491cff0b795873490262e5",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.5073018,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\decoder.py\", line 337, in decode",
+    "hash": "4162955a662ce9468965f357a00959f16071d7a6cd946f98ad2018d08b78acdb",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.521802,
+    "text": "obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+    "hash": "83a0d5559eddc4302d7cf3ae141af7ba41d7062a50ace70f1db577149b0f757b",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.5353014,
+    "text": "File \"C:\\Users\\Gab\\miniconda3\\envs\\myEnv\\lib\\json\\decoder.py\", line 355, in raw_decode",
+    "hash": "3d4af2de8ca02e28c704251d7f5043284195877d44d37a754f3541e4fc0c94fd",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.5472999,
+    "text": "raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+    "hash": "a2c6544cf9d14eabc4e322bc3f819463d3f5709274846e565495537d9772db85",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.5597997,
+    "text": "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "hash": "6e837f3e276193b00876f86ec3e6e47868d745711e17604c39caf842d0c4ddff",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.580302,
+    "text": "127.0.0.1 - - [15/Jul/2025 01:12:08] \"GET /clipboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1\" 304 -",
+    "hash": "3cf4690238fc5e9c6368e1a61b5af06ae1da9d19f0183bc179825579677348b2",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.5992994,
+    "text": "127.0.0.1 - - [15/Jul/2025 01:12:08] \"GET /clipboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1\" 304 -",
+    "hash": "d75b2ea1ac19af4b8c5237e9fc42322f66822457d665610088d4a34244974947",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.6208012,
+    "text": "127.0.0.1 - - [15/Jul/2025 01:12:08] \"GET /clipboard?__debugger__=yes&cmd=resource&f=console.png&s=kyTAPVDNmz1BcnBBqxAV HTTP/1.1\" 200 -",
+    "hash": "3ad4ff74dfbe9d843d2d757117d752f581a089135575cc08b9edae8b45bd8a0f",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538744.637301,
+    "text": "127.0.0.1 - - [15/Jul/2025 01:12:08] \"GET /clipboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1\" 304 -",
+    "hash": "5caa0ad72e737902ddf764be0d3740649246e6868c2ecb3f6900e2310963f0e0",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538752.7078466,
+    "text": "https://x.com/cs2newsupdate",
+    "hash": "b346a0f35e309f28df9b595372e832d57525cab7afd8e02cd6742de72437c070",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538766.8033352,
+    "text": "def save_log(log):",
+    "hash": "5c5a9f097ee66f14bac483d1131958f8f868923bd792807ea60f033d66443224",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538766.8143349,
+    "text": "with open(LOG_PATH, \"w\") as f:",
+    "hash": "1066b8be81aa53cfb03f9998652b136ad0bea77287ac1449cbae58c19bfd9a34",
+    "status": "New"
+  },
+  {
+    "timestamp": 1752538766.8238358,
+    "text": "json.dump(log, f, indent=2)",
+    "hash": "a779629bf4615b57ac1f99753e36c7c62da59cd2b0452458582e9b1310be5eb1",
+    "status": "New"
+  }
+]

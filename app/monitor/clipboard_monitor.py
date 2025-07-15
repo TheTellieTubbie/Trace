@@ -15,12 +15,15 @@ def is_similar(embedding1, embedding2, threshold=0.9):
 def load_log():
     if os.path.exists(LOG_PATH):
         with open(LOG_PATH, "r") as f:
-            return json.load(f)
+            try:
+                return json.load(f)
+            except json.decoder.JSONDecodeError:
+                return []
     return []
 
 def save_log(log):
     with open(LOG_PATH, "w") as f:
-        json.dump(load_log(), f, indent=2)
+        json.dump(log, f, indent=2)
 
 def monitor_clipboard():
     print("Clipboard monitor")

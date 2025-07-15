@@ -80,12 +80,12 @@ def index():
 
 @main.route("/clipboard", methods=["GET", "POST"])
 def clipboard():
-    global montior_thread
+    global monitor_thread
 
     if request.method == "POST":
-        if not montior_thread or not montior_thread.is_alive():
-            montior_thread = threading.Thread(target=monitor_clipboard, daemon=True)
-            montior_thread.start()
+        if not monitor_thread or not monitor_thread.is_alive():
+            monitor_thread = threading.Thread(target=monitor_clipboard, daemon=True)
+            monitor_thread.start()
 
     log_data = load_log()
     return render_template("clipboard.html", log=log_data)
