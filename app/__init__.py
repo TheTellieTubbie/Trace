@@ -6,10 +6,10 @@ from .auth import auth
 import os
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, instance_relative_config=True)
     app.config['UPLOAD_FOLDER'] = os.path.abspath('uploads')
     app.config['SECRET_KEY'] = os.urandom(32)
-    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data/site.db"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///site.db"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -26,6 +26,8 @@ def create_app():
 
 
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+    os.makedirs(os.path.join(os.getcwd(), "data"), exist_ok=True)
+
     app.register_blueprint(auth)
     app.register_blueprint(main)
 

@@ -4,11 +4,17 @@ import numpy as np
 from flask_login import current_user, login_required
 from sklearn.metrics.pairwise import cosine_similarity
 from flask import Blueprint, render_template, request
+from werkzeug.security import check_password_hash
 from werkzeug.utils import secure_filename
 from .extractor import extract_chunks
 from .fingerprints import get_sha256, get_embeddings
+from .forms import LoginForm
 from .history import load_history, update_history
 from app.monitor.clipboard_monitor import monitor_clipboard, load_log
+from flask import redirect, url_for, flash
+from flask_login import login_user
+from .models import User
+
 
 main = Blueprint('main', __name__)
 
@@ -17,67 +23,9 @@ def is_semantically_similar(new_emb, existing_emb, threshold=0.9):
 
 monitor_thread = None
 
-@main.route("/", methods=["GET", "POST"])
-def index():
-    extracted_data = {}
-    history = load_history()
-
-    previous_chunks = []
-    for chunks in history.values():
-        previous_chunks.extend(chunks)
-
-
-    new_chunks_for_history = []
-
-    if request.method == "POST":
-        uploaded_files = request.files.getlist("files")
-        saved_paths = []
-
-        for file in uploaded_files:
-            if file.filename != "":
-                filename = secure_filename(file.filename)
-                save_path = os.path.join("uploads", filename)
-                file.save(save_path)
-                saved_paths.append(filename)
-
-                chunks = extract_chunks(save_path)
-                chunk_data = []
-
-                for chunk in chunks:
-                    hash_val = get_sha256(chunk)
-                    embedding = get_embeddings(chunk)
-
-                    embedding_array = embedding.tolist()
-                    prev_match = next(
-                        (c for c in previous_chunks if
-                         c["hash"] == hash_val or
-                         is_semantically_similar(embedding_array, c["embedding"])),
-                        None
-                    )
-                    if prev_match:
-                        status = "Reused"
-                    else:
-                        status = "New"
-                        new_chunks_for_history.append({
-                            "hash": hash_val,
-                            "text": chunk,
-                            "embedding": embedding.tolist(),
-                        })
-
-                    chunk_data.append({
-                        "text": chunk,
-                        "hash": hash_val,
-                        "embedding": embedding.tolist(),
-                        "status": status
-                    })
-
-                extracted_data[filename] = chunk_data
-
-        update_history(filename, new_chunks_for_history)
-
-        return render_template("index.html", uploaded=True, files=saved_paths, extracted=extracted_data)
-
-    return render_template("index.html", uploaded=False)
+@main.route("/")
+def home_redirect():
+    return redirect(url_for('auth.login'))
 
 @main.route("/clipboard", methods=["GET", "POST"])
 def clipboard():
@@ -96,7 +44,43 @@ def clipboard():
 def student_dashboard():
     if current_user.role != "student":
             return "unauthorized", 403
-    return render_template("student_dashboard.html")
+    saved_files = []
+    history = load_history()
+    previous_chunks = [c for chunks in history.values() for c in chunks]
+    new_chunks_for_history = []
+
+    if request.method == "POST":
+        uploaded_files = request.files.getlist("files")
+
+        for file in uploaded_files:
+            if file.filename != "":
+                filename = secure_filename(file.filename)
+                save_path = os.path.join("uploads", filename)
+                file.save(save_path)
+                saved_files.append(filename)
+                chunks = extract_chunks(save_path)
+
+                for chunk in chunks:
+                    hash_val = get_sha256(chunk)
+                    embedding = get_embeddings(chunk)
+
+                    similar = any(
+                        c["hash"] == hash_val or
+                        is_semantically_similar(embedding, c["embedding"])
+                        for c in previous_chunks
+                    )
+
+                    if not similar:
+                        new_chunks_for_history.append({
+                            "hash": hash_val,
+                            "text": chunk,
+                            "embedding": embedding,
+                            "uploaded_by": current_user.username,
+                        })
+        if saved_files:
+            update_history(current_user.username, new_chunks_for_history)
+
+    return render_template("student_dashboard.html", uploaded=saved_files)
 
 @main.route("/teacher", methods=["GET", "POST"])
 @login_required
@@ -104,3 +88,4 @@ def teacher_dashboard():
     if current_user.role != "teacher":
         return "unauthorized", 403
     return render_template("teacher_dashboard.html")
+

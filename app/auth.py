@@ -1,4 +1,3 @@
-from dominate.tags import form
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import current_user, login_user, logout_user, login_required
@@ -9,6 +8,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
+    form = RegisterForm()
     if form.validate_on_submit():
         existing_user = User.query.filter_by(username=form.username.data).first()
         if existing_user:
@@ -16,6 +16,7 @@ def register():
             return redirect(url_for('auth.login'))
         new_user = User(
             username=form.username.data,
+            email=form.email.data,
             password=generate_password_hash(form.password.data),
             role=form.role.data
         )
