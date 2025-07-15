@@ -1,6 +1,7 @@
 import threading
 import os
 import numpy as np
+from flask_login import current_user, login_required
 from sklearn.metrics.pairwise import cosine_similarity
 from flask import Blueprint, render_template, request
 from werkzeug.utils import secure_filename
@@ -89,3 +90,17 @@ def clipboard():
 
     log_data = load_log()
     return render_template("clipboard.html", log=log_data)
+
+@main.route("/student", methods=["GET", "POST"])
+@login_required
+def student_dashboard():
+    if current_user.role != "student":
+            return "unauthorized", 403
+    return render_template("student_dashboard.html")
+
+@main.route("/teacher", methods=["GET", "POST"])
+@login_required
+def teacher_dashboard():
+    if current_user.role != "teacher":
+        return "unauthorized", 403
+    return render_template("teacher_dashboard.html")
