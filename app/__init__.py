@@ -4,6 +4,7 @@ from .models import db, User
 from .routes import main
 from .auth import auth
 import os
+from datetime import datetime
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
@@ -30,5 +31,10 @@ def create_app():
 
     app.register_blueprint(auth)
     app.register_blueprint(main)
+
+    def datetimeformat(value):
+        return datetime.fromtimestamp(value).strftime('%Y-%m-%d %H:%M:%S')
+
+    app.jinja_env.filters['datetimeformat'] = datetimeformat
 
     return app
