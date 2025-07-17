@@ -1,25 +1,34 @@
 import threading
 import os
+import joblib
 import numpy as np
 import json
+import torch
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import current_user, login_required, login_user
 from werkzeug.security import check_password_hash
 from werkzeug.utils import secure_filename
-from sklearn.metrics.pairwise import cosine_similarity
 
+from .ai_detector.extract_features import extract_combined_features
 from .models import User
 from .forms import LoginForm
 from .extractor import extract_chunks
-from .fingerprints import get_sha256, get_embeddings
+from .fingerprints import get_sha256
 from .history import load_history, update_history
-from .detector import analyze_chunk
-from app.baseline import get_user_baseline, update_user_baseline
 from app.monitor.clipboard_monitor import monitor_clipboard, load_log
+from app.ai_detector.model import AIContentClassifier
 
 main = Blueprint('main', __name__)
-
 monitor_thread = None
+
+MODEL_PATH = "app/ai_detector/ai_model.pt"
+SCALAR_PATH = "app/ai_detector/ai_scalar.pkl"
+model = AIContentClassifier(input_dim=17)
+model.load_state_dict(torch.load(MODEL_PATH, map_location=torch.device('cpu')))
+model.eval()
+scaler = joblib.load(SCALAR_PATH)
+
+AI_THRESHOLD = 0.5
 
 @main.route("/")
 def home_redirect():
@@ -45,7 +54,6 @@ def student_dashboard():
     display_chunks = []
     history = load_history()
     previous_chunks = [c for chunks in history.values() for c in chunks]
-    clipboard_log = load_log()
     new_chunks_for_history = []
 
     if request.method == "POST":
@@ -60,27 +68,42 @@ def student_dashboard():
                 chunks = extract_chunks(save_path)
 
                 for chunk in chunks:
-                    hash_val = get_sha256(chunk)
-                    embedding = get_embeddings(chunk)
+                    try:
+                        hash_val = get_sha256(chunk)
+                        features = extract_combined_features(chunk)
+                        if features is None:
+                            continue
 
-                    chunk_data = {
-                        "hash": hash_val,
-                        "text": chunk,
-                        "embedding": embedding,
-                    }
+                        features_scaled = scaler.transform([features])
+                        input_tensor = torch.tensor(features_scaled, dtype=torch.float32).unsqueeze(0)
 
-                    status, reason = analyze_chunk(chunk_data, embedding, clipboard_log, previous_chunks, current_user.username)
+                        with torch.no_grad():
+                            prediction = model(input_tensor).item()
 
-                    if status == "New":
-                        new_chunks_for_history.append(chunk)
 
-                    display_chunks.append({
-                        "text": chunk,
-                        "status": status,
-                        "reason": reason,
-                        "hash": hash_val,
-                        "embedding": embedding[:5],
-                    })
+                        status = "Suspicious" if prediction > AI_THRESHOLD else "Unsuspicious"
+                        reason = f"AI Prediction Score: {prediction:.2f}"
+
+                        new_chunks_for_history.append({
+                            "hash": hash_val,
+                            "text": chunk,
+                            "embedding": features.tolist(),
+                            "status": status,
+                        })
+
+                        display_chunks.append({
+                            "text": chunk,
+                            "status": status,
+                            "reason": reason,
+                            "confidence": prediction,
+                            "source": "AI Model",
+                            "hash": hash_val,
+                            "embedding": features[:5],
+                        })
+
+                    except Exception as e:
+                        print(f"Exception chunk: {e}")
+                        continue
 
         if saved_files:
             update_history(current_user.username, new_chunks_for_history)
@@ -94,10 +117,9 @@ def teacher_dashboard():
         return "unauthorized", 403
 
     clipboard_log = load_log()
-
     flagged_clipboard = [
         entry for entry in clipboard_log
-        if entry.get("status") == "Suspicious!" or entry.get("status") == "Reused"
+        if entry.get("status") == "Suspicious" or entry.get("status") == "Reused"
     ]
 
     history = load_history()
@@ -105,7 +127,7 @@ def teacher_dashboard():
 
     for user, chunks in history.items():
         for chunk in chunks:
-            if chunk.get("status") in ["Suspicious!", "Reused"]:
+            if chunk.get("status") in ["Suspicious!", "Reused", "Suspicious!"]:
                 flagged_uploads.setdefault(user, []).append(chunk)
 
     return render_template(

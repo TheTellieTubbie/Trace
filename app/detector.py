@@ -28,25 +28,32 @@ def analyze_chunk(chunk_data, embedding, clipboard_log, previous_chunks, usernam
     for past in previous_chunks:
         if hash_val == past["hash"]:
             reasons.append("Exact match with previously submitted content (hash match).")
-            return "Resued", "; ".join(reasons)
+            status = "Reused"
+            break
 
         similar, sim_score = is_semantically_similar(embedding, past["embedding"])
         if similar:
             reasons.append(f"High semantic similarity to prior content (similarity={sim_score:.2}).")
-            return "Resued", "; ".join(reasons)
+            status = "Reused"
+            break
 
     if is_in_clipboard(chunk_text, clipboard_log):
         reasons.append("Chunk text previously appeared in clipboard history.")
+        if status == "New":
+            status = "Suspicious!"
 
     user_baseline = get_user_baseline(username)
     if user_baseline is not None:
         anomaly, sim_score = detect_style_anomaly(embedding, user_baseline)
         if anomaly:
             reasons.append(f"Style deviates from typical user writing (style similarity={sim_score:.2}).")
+            if status == "New!":
+                status = "Suspicious!"
 
-        if reasons:
-            status = "Suspicious!"
-        return status, "; ".join(reasons) if reasons else "No matching signals detected."
+        if not reasons:
+            reasons.append("No matching signals detected.")
+
+        return status, "; ".join(reasons)
 
 
 
